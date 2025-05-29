@@ -1,6 +1,10 @@
 import streamlit as st
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import gdown
+
+# Shareable link (make sure it's public or "anyone with the link")
+gdown.download("https://drive.google.com/file/d/131e-hQWCBBYvqmuuVSGF_nwxCw9grcSg/view?usp=drive_link", output="model.zip", quiet=False)
 
 # Load model and tokenizer
 @st.cache_resource
