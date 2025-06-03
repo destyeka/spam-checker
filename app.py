@@ -15,7 +15,7 @@ st.title("📮 Spam Checker!")
 st.write("Masukin pesan lalu lihat hasilnya spam apa bukan!")
 
 # User input
-text = st.text_area("Pesannya taro sini:")
+text = st.text_area("Pesannya taro sini...")
 
 if st.button("Cek"):
     if text.strip() == "":
