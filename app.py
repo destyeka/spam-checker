@@ -35,7 +35,7 @@ if st.button("Cek"):
             probs = torch.softmax(outputs.logits, dim=1)
             pred = torch.argmax(probs, dim=1).item()
 
-        if prediction == "1":
+        if prediction == 1:
             st.error("🚨 This message is classified as **SPAM**.")
         else:
             st.success("✅ This message is classified as **NOT SPAM**.")
