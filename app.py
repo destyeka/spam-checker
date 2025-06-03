@@ -11,8 +11,8 @@ def load_model():
 
 tokenizer, model = load_model()
 
-st.title("📮 Spam Checker!")
-st.write("Masukin pesan lalu lihat hasilnya spam apa bukan!")
+st.title("📮 Spam or Ham?")
+st.write("Ini program buat cek pesan yang lo dapet spam atau bukan! Khusus pesan berbahasa Indonesia, ya! Kalo pake bahasa lain hasilnya bakal ga valid.")
 
 # User input
 text = st.text_area("Pesannya taro sini...")
@@ -36,7 +36,7 @@ if st.button("Cek"):
             pred = torch.argmax(probs, dim=1).item()
 
         if pred == 1:
-            st.error("🚨 This message is classified as **SPAM**.")
+            st.error("🚨 **SPAM!** Yah... Pesannya spam, nih.")
         else:
-            st.success("✅ This message is classified as **NOT SPAM**.")
+            st.success("✅ **HAM!** Yeay! Pesannya legit, bukan spam!")
 
